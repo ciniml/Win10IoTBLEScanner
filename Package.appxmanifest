@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="ca806340-616e-4373-afc0-85ce1666d8b6"
-    Publisher="CN=Kenta"
+    Name="IoTBLEScanner"
+    Publisher="CN=KentaIDA"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="ca806340-616e-4373-afc0-85ce1666d8b6" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="B9220EBC-D910-478B-B671-4A6A342AE798" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>IoTBLEScannerHeaded</DisplayName>

@@ -14,6 +14,8 @@ namespace IoTBLEScannerHeaded
 {
     class MainPageViewModel : IDisposable
     {
+        private HardwareButton hardwareButton;
+
         public BleScanner Scanner { get; private set; }
 
         public ReactiveCommand StartCommand { get; private set; }
@@ -25,9 +27,13 @@ namespace IoTBLEScannerHeaded
         public MainPageViewModel()
         {
             this.Scanner = new BleScanner();
+            this.hardwareButton = new HardwareButton(5);
+            this.disposables.Add(this.hardwareButton);
 
             this.StartCommand = this.Scanner.IsStopped.ToReactiveCommand();
             this.StartCommand
+                .Select(_ => Unit.Default)
+                .Merge(this.hardwareButton.PressedObservable)
                 .Select(_ => { this.Scanner.Start(); return Unit.Default; })
                 .Subscribe()
                 .AddTo(this.disposables);

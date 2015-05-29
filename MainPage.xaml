@@ -38,8 +38,9 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Advertisement.LocalName}"/>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding Advertisement.LocalName}"/>
                         <TextBlock Grid.Row="1" Grid.Column="0" Margin="4,0">
                             <Run  Text="Address: "/>
                             <Run  Text="{Binding Address, Converter={StaticResource BleDeviceAddressConverter}}"/>
@@ -47,6 +48,10 @@
                         <TextBlock Grid.Row="2" Grid.Column="1" Margin="4,0">
                             <Run  Text="RSSI: "/>
                             <Run  Text="{Binding Rssi}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="2" Grid.Column="2" Margin="4,0">
+                            <Run  Text="Temperature: "/>
+                            <Run  Text="{Binding Temperature}"/>
                         </TextBlock>
                     </Grid>
                 </DataTemplate>
