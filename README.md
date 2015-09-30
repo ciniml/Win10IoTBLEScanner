@@ -8,9 +8,15 @@ BLE advertisement scanner on Windows 10 IoT Core
 * RPi2 with Windows 10 IoT Core
 	- or A Windows 10 TP installed device
 * An USB Bluetooth dongle which supports Bluetooth Low Energy
-	- Confirmed with a dongle which uses Broadcomm BCM20702 chip.
+	- Confirmed with a dongle which uses Broadcomm BCM20702 chip on Win10 IoT Core Public Release
+	- Confirmed with Buffalo BSBT4D09BK dongle on Win10 IoT Core Insider Preview build at Sep.25'2015.
 
 ## Install Drivers To BCM20702 USB Dongle
+
+### Warning
+This instruction is now *obsolete* and can not install the driver correctly at Win10 IoT Core Insider Preview.
+You should use a dongle which operates normally without this instruction such as Buffalo BSBT4D09BK.
+
 Skip this section if you are using an USB dongle with other chip or you have already installed drivers to an USB dongle with BCM20702.
 
 DISCLAIMER: I do not assume any responsibilities for any results by following this instruction.
