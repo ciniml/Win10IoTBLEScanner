@@ -4,9 +4,9 @@ BLE advertisement scanner on Windows 10 IoT Core
 ![screen](screen.png)
 
 ## Requirements
-* Visual Studio 2015 RC
+* Visual Studio 2015 RTM
 * RPi2 with Windows 10 IoT Core
-	- or A Windows 10 TP installed device
+	- or A Windows 10 build 10586 or above installed device
 * An USB Bluetooth dongle which supports Bluetooth Low Energy
 	- Confirmed with a dongle which uses Broadcomm BCM20702 chip on Win10 IoT Core Public Release
 	- Confirmed with Buffalo BSBT4D09BK dongle on Win10 IoT Core Insider Preview build at Sep.25'2015.
