@@ -21,7 +21,18 @@ namespace BLEDriverInfPatch
             var deviceVid = args[1];
             var devicePid = args[2];
 
-            var sourceInfPath = @"\\" + computerName + @"\C$\Windows\Inf\BTH_MC.inf";
+            var sourceInfPathPatterns = new[] {
+                new { Path=@"\C$\Windows\Inf\BTH_MC.inf", DeviceName="BthUsb" },
+                new { Path=@"\C$\Windows\Inf\BTH.inf", DeviceName="BthUsbGeneric" },
+            };
+
+            var sourceInfPathPattern = sourceInfPathPatterns.FirstOrDefault(pattern => File.Exists(@"\\" + computerName + pattern.Path));
+            if( sourceInfPathPattern == null)
+            {
+                Console.Error.WriteLine("Error: Can not access to the source INF file. Please re-check the ComputerName is correct.");
+                return 1;
+            }
+
             var sectionPattern = new Regex(@"\[([^\]]+)\]");
             var valuePattern = new Regex(@"([^=]+)=(.*)");
 
@@ -32,7 +43,7 @@ namespace BLEDriverInfPatch
                 "DestinationDirs",
             };
 
-            using (var reader = new StreamReader(sourceInfPath))
+            using (var reader = new StreamReader(sourceInfPathPattern.Path))
             using(var writer = new StreamWriter("BCM20702.inf"))
             {
                 var currentSection = "";
@@ -55,7 +66,7 @@ namespace BLEDriverInfPatch
                         // Add target adapter device ID to GenericAdapter section.
                         if (currentSection == "GenericAdapter.NTarm")
                         {
-                            writer.WriteLine(@"Generic Bluetooth Adapter=                       BthUsb, USB\Vid_{0}&Pid_{1}", deviceVid, devicePid);
+                            writer.WriteLine($@"Generic Bluetooth Adapter={sourceInfPathPattern.DeviceName}, USB\Vid_{deviceVid}&Pid_{devicePid}");
                         }
                     }
                     else
