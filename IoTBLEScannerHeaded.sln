@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTBLEScannerHeaded", "IoTBLEScannerHeaded.csproj", "{6E2578C7-E101-4661-963F-668707E03E90}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLEDriverInfPatch", "BLEDriverInfPatch\BLEDriverInfPatch.csproj", "{42DD58D0-F6D5-4785-A1CA-F19E60F06876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTBLEScannerHeaded", "IoTBLEScannerHeaded\IoTBLEScannerHeaded.csproj", "{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,26 +19,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6E2578C7-E101-4661-963F-668707E03E90}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{6E2578C7-E101-4661-963F-668707E03E90}.Debug|ARM.ActiveCfg = Debug|ARM
-		{6E2578C7-E101-4661-963F-668707E03E90}.Debug|ARM.Build.0 = Debug|ARM
-		{6E2578C7-E101-4661-963F-668707E03E90}.Debug|ARM.Deploy.0 = Debug|ARM
-		{6E2578C7-E101-4661-963F-668707E03E90}.Debug|x64.ActiveCfg = Debug|x64
-		{6E2578C7-E101-4661-963F-668707E03E90}.Debug|x64.Build.0 = Debug|x64
-		{6E2578C7-E101-4661-963F-668707E03E90}.Debug|x64.Deploy.0 = Debug|x64
-		{6E2578C7-E101-4661-963F-668707E03E90}.Debug|x86.ActiveCfg = Debug|x86
-		{6E2578C7-E101-4661-963F-668707E03E90}.Debug|x86.Build.0 = Debug|x86
-		{6E2578C7-E101-4661-963F-668707E03E90}.Debug|x86.Deploy.0 = Debug|x86
-		{6E2578C7-E101-4661-963F-668707E03E90}.Release|Any CPU.ActiveCfg = Release|x86
-		{6E2578C7-E101-4661-963F-668707E03E90}.Release|ARM.ActiveCfg = Release|ARM
-		{6E2578C7-E101-4661-963F-668707E03E90}.Release|ARM.Build.0 = Release|ARM
-		{6E2578C7-E101-4661-963F-668707E03E90}.Release|ARM.Deploy.0 = Release|ARM
-		{6E2578C7-E101-4661-963F-668707E03E90}.Release|x64.ActiveCfg = Release|x64
-		{6E2578C7-E101-4661-963F-668707E03E90}.Release|x64.Build.0 = Release|x64
-		{6E2578C7-E101-4661-963F-668707E03E90}.Release|x64.Deploy.0 = Release|x64
-		{6E2578C7-E101-4661-963F-668707E03E90}.Release|x86.ActiveCfg = Release|x86
-		{6E2578C7-E101-4661-963F-668707E03E90}.Release|x86.Build.0 = Release|x86
-		{6E2578C7-E101-4661-963F-668707E03E90}.Release|x86.Deploy.0 = Release|x86
 		{42DD58D0-F6D5-4785-A1CA-F19E60F06876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{42DD58D0-F6D5-4785-A1CA-F19E60F06876}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42DD58D0-F6D5-4785-A1CA-F19E60F06876}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -55,6 +35,26 @@ Global
 		{42DD58D0-F6D5-4785-A1CA-F19E60F06876}.Release|x64.Build.0 = Release|Any CPU
 		{42DD58D0-F6D5-4785-A1CA-F19E60F06876}.Release|x86.ActiveCfg = Release|Any CPU
 		{42DD58D0-F6D5-4785-A1CA-F19E60F06876}.Release|x86.Build.0 = Release|Any CPU
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Debug|ARM.ActiveCfg = Debug|ARM
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Debug|ARM.Build.0 = Debug|ARM
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Debug|ARM.Deploy.0 = Debug|ARM
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Debug|x64.ActiveCfg = Debug|x64
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Debug|x64.Build.0 = Debug|x64
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Debug|x64.Deploy.0 = Debug|x64
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Debug|x86.ActiveCfg = Debug|x86
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Debug|x86.Build.0 = Debug|x86
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Debug|x86.Deploy.0 = Debug|x86
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Release|Any CPU.ActiveCfg = Release|x86
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Release|ARM.ActiveCfg = Release|ARM
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Release|ARM.Build.0 = Release|ARM
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Release|ARM.Deploy.0 = Release|ARM
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Release|x64.ActiveCfg = Release|x64
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Release|x64.Build.0 = Release|x64
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Release|x64.Deploy.0 = Release|x64
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Release|x86.ActiveCfg = Release|x86
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Release|x86.Build.0 = Release|x86
+		{2E2AE1EB-66C7-42F4-9427-9642716EFAF8}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

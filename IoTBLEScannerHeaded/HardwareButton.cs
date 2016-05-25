@@ -27,19 +27,23 @@ namespace IoTBLEScannerHeaded
             if (ApiInformation.IsTypePresent(typeof(GpioPin).FullName))
             {
                 var controller = GpioController.GetDefault();
-                this.pin = controller.OpenPin(this.PinNumber);
-                this.pin.SetDriveMode(GpioPinDriveMode.Input);
-                this.pin.DebounceTimeout = TimeSpan.FromMilliseconds(10);
+                if (controller != null)
+                {
+                    this.pin = controller.OpenPin(this.PinNumber);
+                    this.pin.SetDriveMode(GpioPinDriveMode.Input);
+                    this.pin.DebounceTimeout = TimeSpan.FromMilliseconds(10);
 
-                this.PressedObservable = Observable
-                    .FromEvent<TypedEventHandler<GpioPin, GpioPinValueChangedEventArgs>, GpioPinValueChangedEventArgs>(
-                        handler => (o, e) => handler(e),
-                        handler => this.pin.ValueChanged += handler,
-                        handler => this.pin.ValueChanged -= handler)
-                    .Where(e => e.Edge == GpioPinEdge.FallingEdge)
-                    .Select(_ => Unit.Default);
+                    this.PressedObservable = Observable
+                        .FromEvent<TypedEventHandler<GpioPin, GpioPinValueChangedEventArgs>, GpioPinValueChangedEventArgs>(
+                            handler => (o, e) => handler(e),
+                            handler => this.pin.ValueChanged += handler,
+                            handler => this.pin.ValueChanged -= handler)
+                        .Where(e => e.Edge == GpioPinEdge.FallingEdge)
+                        .Select(_ => Unit.Default);
+                }
             }
-            else
+
+            if (this.PressedObservable == null)
             {
                 this.PressedObservable = Observable.Empty<Unit>();
             }
